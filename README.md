@@ -1,1 +1,1 @@
-# restaurant-page
+Create a basic restaurant page using Javascript to generate it. The goal of the project is to practice utilizing webpack and npm commands to compile and minimize distribution code.
