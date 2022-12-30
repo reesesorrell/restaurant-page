@@ -1,0 +1,29 @@
+body {
+    background-color: lightgrey;
+    margin: 0;
+}
+
+.image-banner {
+    background-color: gray;
+}
+
+.egg-picture {
+    display: block;
+    margin: auto;
+    width: max(400px, 60vh);
+}
+
+.home-title {
+    font-weight: bold;
+    font-size: 4vw;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.welcome-message {
+    font-size: 2.3vw;
+    padding: 30px 40px;
+    color: #454545;
+    font-style: italic;
+    text-align: center;
+}
