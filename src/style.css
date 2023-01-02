@@ -1,3 +1,9 @@
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
 body {
     background-color: lightgrey;
     margin: 0;
@@ -5,12 +11,14 @@ body {
 
 .image-banner {
     background-color: gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .egg-picture {
     display: block;
     margin: auto;
-    width: max(400px, 60vh);
+    width: 30vw;
 }
 
 .home-title {
@@ -26,4 +34,45 @@ body {
     color: #454545;
     font-style: italic;
     text-align: center;
+}
+
+.egg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.egg {
+    width: 8vw;
+    height: 11vw;
+    background: url('./egg.png');
+    background-size: 100%;
+    text-align: center;
+}
+
+.egg:hover {
+    cursor: pointer;
+}
+
+.left-eggs {
+    transform: rotate(30deg);
+}
+
+.left-eggs >* {
+    transform: rotate(-30deg);
+}
+
+.right-eggs {
+    transform: rotateY(180deg) rotate(30deg);
+}
+
+.right-eggs >* {
+    transform: rotate(-30deg) rotateY(-180deg);
+}
+
+.egg-text {
+    position: relative;
+    top: 50%;
+    font-size: 1.5vw;
 }

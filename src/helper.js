@@ -3,23 +3,24 @@ const displayAdder = (function() {
         const newDiv = document.createElement('div');
         newDiv.textContent = textContent;
         if (divClass) {
-            newDiv.classList.add(divClass);
+            const divClassList = divClass.split(',');
+            divClassList.forEach(element => {
+                newDiv.classList.add(element);
+            });
         }
         newDiv.id = divId;
         parentElement.appendChild(newDiv)
         return newDiv;
     }
 
-    const createImage = (parentElement, imageSource, width='', imageClass='') => {
-        if (width) {
-            var newImage = new Image(width);
-        }
-        else {
-            var newImage = new Image();
-        }
+    const createImage = (parentElement, imageSource, imageClass='') => {
+        var newImage = new Image();
         newImage.src = imageSource;
         if (imageClass) {
-            newImage.classList.add(imageClass);
+            const imageClassList = imageClass.split(',');
+            imageClassList.forEach(element => {
+                newImage.classList.add(element);
+            });
         }
         parentElement.appendChild(newImage);
         return createImage;
