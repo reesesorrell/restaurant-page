@@ -17,4 +17,4 @@ const populateHomePage = () => {
     displayAdder.createDiv(home, welcomeMessage, 'welcome-message');
 }
 
-export {populateHomePage as populateHomePage}
+export {populateHomePage as populateHomePage};

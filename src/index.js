@@ -1,11 +1,15 @@
 import { populateHomePage } from "./home-page";
+import { populateAboutPage } from "./about-page";
+import { populateMenuPage } from "./menu-page";
+import { populateContactPage } from "./contact-page";
 import { displayAdder } from "./helper";
 import './style.css';
 
 const tabController = (function() {
 
-    const _clearPage = (parentId)  => {
-        const parent = document.getElementById(parentId);
+    const _clearPage = ()  => {
+        const imageBanner = document.getElementById('image-banner');
+        const parent = imageBanner.nextElementSibling;
         parent.innerHTML = '';
         parent.remove();
         const imageHolder = document.getElementById('image-container');
@@ -13,20 +17,23 @@ const tabController = (function() {
     }
 
     const tabHome = () => {
-        _clearPage('home');
+        _clearPage();
         populateHomePage();
     }
     
     const tabAbout = () => {
-        console.log('about');
+        _clearPage();
+        populateAboutPage();
     }
     
     const tabMenu = () => {
-        console.log('menu');
+        _clearPage();
+        populateMenuPage();
     }
     
     const tabContact = () => {
-        console.log('contact');
+        _clearPage();
+        populateContactPage();
     }
 
     return {tabHome, tabMenu, tabAbout, tabContact}
@@ -35,9 +42,9 @@ const tabController = (function() {
 const makeTabs = () => {
     const parent = document.getElementById('content');
 
-    displayAdder.createDiv(parent, 'The Eggcelent Restaurante', 'home-title');
+    displayAdder.createDiv(parent, 'The Eggcelent Restauranté', 'home-title');
 
-    const eggBackground = displayAdder.createDiv(parent, '', 'image-banner')
+    const eggBackground = displayAdder.createDiv(parent, '', 'image-banner', 'image-banner')
 
     const eggContainerOne = displayAdder.createDiv(eggBackground, '', 'egg-container');
 
