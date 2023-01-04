@@ -13,6 +13,7 @@ body {
     background-color: gray;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
 .egg-picture {
@@ -24,8 +25,9 @@ body {
 .home-title {
     font-weight: bold;
     font-size: 4vw;
-    margin: 28px 0;
+    padding: 28px 0;
     text-align: center;
+    background-color: darkgray;
 }
 
 .welcome-message {
@@ -110,4 +112,37 @@ body {
 .person-info {
     font-size: 1.8vw;
     color: #454545;
+}
+
+.contact {
+    text-align: center;
+    padding: 30px;
+    font-size: 2.5vw;
+    font-weight: bold;
+}
+
+.contact-info {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.menu {
+    text-align: center;
+    padding: 30px;
+}
+
+.menu-header {
+    font-size: 2.5vw;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menu-types {
+    font-size: 1.7vw;
+    margin-bottom: 10px;
+}
+
+.menu-disclaimer {
+    font-size: 1.4vw;
+    font-style: italic;
 }
