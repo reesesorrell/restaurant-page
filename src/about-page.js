@@ -1,12 +1,7 @@
 import { displayAdder } from "./helper";
-import eggFamily from './egg-family.png';
 
 const populateAboutPage = () => {
     const parent = document.getElementById('content');
-
-    const imageContainer = document.getElementById('image-container');
-
-    displayAdder.createImage(imageContainer, eggFamily, 'egg-picture');
 
     const about = displayAdder.createDiv(parent, '', 'about', 'about');
 

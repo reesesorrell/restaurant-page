@@ -6,11 +6,12 @@
 
 body {
     background-color: lightgrey;
+    background-image: url('./egg-background.png');
+    background-size: cover;
     margin: 0;
 }
 
 .image-banner {
-    background-color: gray;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
@@ -27,7 +28,9 @@ body {
     font-size: 4vw;
     padding: 28px 0;
     text-align: center;
-    background-color: darkgray;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    height: 20vh;
 }
 
 .welcome-message {

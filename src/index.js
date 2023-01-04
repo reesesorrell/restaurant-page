@@ -12,8 +12,6 @@ const tabController = (function() {
         const parent = imageBanner.nextElementSibling;
         parent.innerHTML = '';
         parent.remove();
-        const imageHolder = document.getElementById('image-container');
-        imageHolder.innerHTML = '';
     }
 
     const tabHome = () => {
@@ -55,8 +53,6 @@ const makeTabs = () => {
     const aboutEgg = displayAdder.createDiv(eggContainerOne, '', 'egg,left-eggs');
     displayAdder.createDiv(aboutEgg, 'About', 'egg-text');
     aboutEgg.onclick = tabController.tabAbout;
-
-    displayAdder.createDiv(eggBackground, '', 'image-container', 'image-container');
 
     const eggContainerTwo = displayAdder.createDiv(eggBackground, '', 'egg-container');
 
