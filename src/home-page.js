@@ -12,7 +12,7 @@ const populateHomePage = () => {
 
     displayAdder.createImage(parent, chefPic, 'chef-pic');
 
-    displayAdder.createDiv(parent, 'Come get eggcited with us!', 'info-text');
+    displayAdder.createDiv(parent, 'Come get eggcited with us!', 'info-text,extra-top-margin');
 }
 
 export {populateHomePage as populateHomePage};

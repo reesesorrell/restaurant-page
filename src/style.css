@@ -92,7 +92,6 @@ body {
 .home-container {
     display: grid;
     grid-template-rows: 1fr 1fr 5fr 1fr;
-    gap: 30px;
     justify-content: center;
 }
 
@@ -143,4 +142,18 @@ body {
 .menu-item-description {
     font-size: 15px;
     text-align: center;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 10fr;
+    gap: 15px;
+}
+
+.location-pic {
+    width: 100%;
+}
+
+.extra-top-margin {
+    margin-top: 25px;
 }
