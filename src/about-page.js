@@ -1,28 +1,19 @@
 import { displayAdder } from "./helper";
 
 const populateAboutPage = () => {
-    const parent = document.getElementById('content');
+    const parent = document.getElementById('block-container');
 
-    const about = displayAdder.createDiv(parent, '', 'about', 'about');
+    parent.classList.add('about-container');
 
-    displayAdder.createDiv(about, 'Our Family', 'about-intro');
+    displayAdder.createDiv(parent, 'Hours:', 'info-text');
+    displayAdder.createDiv(parent, 'Sunday: 11 AM - 3 PM', 'info-text');
+    displayAdder.createDiv(parent, 'Monday: CLOSED', 'info-text');
+    displayAdder.createDiv(parent, 'Tuesday: 7 AM - 3 PM', 'info-text');
+    displayAdder.createDiv(parent, 'Wednesday: 7 AM - 3 PM', 'info-text');
+    displayAdder.createDiv(parent, 'Thursday: 7 AM - 3 PM', 'info-text');
+    displayAdder.createDiv(parent, 'Friday: 8 AM - 9 PM', 'info-text');
+    displayAdder.createDiv(parent, 'Saturday: 8 AM - 9 PM', 'info-text');
 
-    const fatherTitle = "Frédregg";
-    const fatherMessage = `I am the father of our lovely family. I have a passion for making delicious food
-    and bringing joy to people's faces and stomachs. I serve as the head chef where I get to crack jokes all day long!`;
-    const motherTitle = "Monahuevo";
-    const motherMessage = `I'm the mother of our family and act as the floor manager at our restaurant. I get so eggcited
-    everyday that I get to work. I love serving others and helping keep our restaurant running as smoothly as possible.`;
-    const sonTitle = "Oeuf";
-    const sonMessage = `I'm the only son of the family. I wash the dishes at the restaurant, and I absolutely hate it. 
-    This restaurant is so dumb. Get me out please. I just want to eggsplore the world.`
-
-    displayAdder.createDiv(about, fatherTitle, 'person-intro');
-    displayAdder.createDiv(about, fatherMessage, 'person-info');
-    displayAdder.createDiv(about, motherTitle, 'person-intro');
-    displayAdder.createDiv(about, motherMessage, 'person-info');
-    displayAdder.createDiv(about, sonTitle, 'person-intro');
-    displayAdder.createDiv(about, sonMessage, 'person-info');
 }
 
 export {populateAboutPage as populateAboutPage};

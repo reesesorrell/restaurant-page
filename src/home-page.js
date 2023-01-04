@@ -1,15 +1,18 @@
 import { displayAdder } from "./helper";
+import chefPic from "./chef.png";
 
 const populateHomePage = () => {
 
-    const parent = document.getElementById('content');
+    const parent = document.getElementById('block-container');
 
-    const home = displayAdder.createDiv(parent, '', 'home', 'home');
+    parent.classList.add('home-container');
 
-    const welcomeMessage = `Welcome to the Eggcelent Restaurante! Here we are passionate
-    about creating the best eggs possible. We try to provide a variety of preperations
-    using one of the most flexible ingredient found in any kitchen, the egg!`
-    displayAdder.createDiv(home, welcomeMessage, 'welcome-message');
+    displayAdder.createDiv(parent, 'Best eggs in the tri state area', 'info-text');
+    displayAdder.createDiv(parent, 'Made with purpose for over 55 years', 'info-text');
+
+    displayAdder.createImage(parent, chefPic, 'chef-pic');
+
+    displayAdder.createDiv(parent, 'Come get eggcited with us!', 'info-text');
 }
 
 export {populateHomePage as populateHomePage};

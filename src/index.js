@@ -8,10 +8,9 @@ import './style.css';
 const tabController = (function() {
 
     const _clearPage = ()  => {
-        const imageBanner = document.getElementById('image-banner');
-        const parent = imageBanner.nextElementSibling;
-        parent.innerHTML = '';
-        parent.remove();
+        const container = document.getElementById('block-container');
+        container.innerHTML = "";
+        container.className = 'block-container';
     }
 
     const tabHome = () => {
@@ -38,31 +37,29 @@ const tabController = (function() {
 })();
 
 const makeTabs = () => {
-    const parent = document.getElementById('content');
+    const content = document.getElementById('content');
 
-    displayAdder.createDiv(parent, 'The Eggcelent Restauranté', 'home-title');
+    const parent = displayAdder.createDiv(content, '', 'main-bar');
 
-    const eggBackground = displayAdder.createDiv(parent, '', 'image-banner', 'image-banner')
-
-    const eggContainerOne = displayAdder.createDiv(eggBackground, '', 'egg-container');
-
-    const homeEgg = displayAdder.createDiv(eggContainerOne, '', 'egg,left-eggs');
+    const homeEgg = displayAdder.createDiv(parent, '', 'egg,left-eggs');
     displayAdder.createDiv(homeEgg, 'Home', 'egg-text');
     homeEgg.onclick = tabController.tabHome;
 
-    const aboutEgg = displayAdder.createDiv(eggContainerOne, '', 'egg,left-eggs');
-    displayAdder.createDiv(aboutEgg, 'About', 'egg-text');
+    const aboutEgg = displayAdder.createDiv(parent, '', 'egg,left-eggs');
+    displayAdder.createDiv(aboutEgg, 'Hours', 'egg-text');
     aboutEgg.onclick = tabController.tabAbout;
 
-    const eggContainerTwo = displayAdder.createDiv(eggBackground, '', 'egg-container');
+    displayAdder.createDiv(parent, 'The Eggcelent Restauranté', 'home-title');
 
-    const menuEgg = displayAdder.createDiv(eggContainerTwo, '', 'egg,right-eggs');
+    const menuEgg = displayAdder.createDiv(parent, '', 'egg,right-eggs');
     displayAdder.createDiv(menuEgg, 'Menu', 'egg-text');
     menuEgg.onclick = tabController.tabMenu;
 
-    const contactEgg = displayAdder.createDiv(eggContainerTwo, '', 'egg,right-eggs');
+    const contactEgg = displayAdder.createDiv(parent, '', 'egg,right-eggs');
     displayAdder.createDiv(contactEgg, 'Contact', 'egg-text');
     contactEgg.onclick = tabController.tabContact;
+
+    displayAdder.createDiv(content, '', 'block-container', 'block-container');
 }
 
 makeTabs();
